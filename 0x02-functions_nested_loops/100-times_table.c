@@ -1,95 +1,48 @@
 #include "main.h"
-
 /**
- * print - function to print recursively using _putchar
- * @var: variable to be printed
- */
+*print_times_table - print times table up to input
+*Description: Writes times table up to imput not exceeding 15
+*@n: size of times table
+*Return: Nothing
+*/
+void print_times_table(int n)
+{
+	int y, x, prod;
 
-	void print(int var)
-
+	if (n <= 15 && n >= 0)
 	{
-
-	if (var / 10)
-
-		print(var / 10);
-
-	_putchar('0' + (var % 10));
-
-	}
-
-/**
- * print_times_table - prints the n times table, starting with 0
- * @n: time table to print
- */
-
-	void print_times_table(int n)
-
-	{
-
-	int ii, jj, mul;
-
-	if (n < 0 || n > 15)
-
-		return;
-
-	for (ii = 0; ii <= n; ii++)
-
-	{
-
-		for (jj = 0; jj <= n; jj++)
-
+		for (y = 0; y <= n; y++)
 		{
-
-			mul = ii * jj;
-
-			if (jj == 0)
-
-				_putchar('0' + mul);
-
-			else if (mul < 10)
-
+			for (x = 0; x <= n; x++)
 			{
-
-				_putchar(' ');
-
-				_putchar(' ');
-
-				_putchar('0' + mul);
-
-			}
-
-			else if (mul < 100)
-
-			{
-
-				_putchar(' ');
-
-				print(mul);
-
-			}
-
+				prod = (y * x);
+				if (x != 0)
+				{
+					_putchar(',');
+					_putchar(' ');
+				}
+				if (prod < 10 && x != 0)
+				{
+					_putchar(' ');
+					_putchar(' ');
+					_putchar((prod % 10) + '0');
+				}
+				else if (prod >= 10 && prod < 100)
+				{
+					_putchar(' ');
+					_putchar((prod / 10) + '0');
+					_putchar((prod % 10) + '0');
+				}
+				else if (prod >= 100 && x != 0)
+				{
+					_putchar((prod / 100) + '0');
+					_putchar((prod / 10) % 10 + '0');
+					_putchar((prod % 10) + '0');
+				}
 				else
-
-			{
-
-				print(mul);
-
+					_putchar((prod % 10) + '0');
 			}
-
-			if (jj < n)
-
-			{
-
-				_putchar(',');
-
-				_putchar(' ');
-
-			}
-
+			_putchar('\n');
 		}
-
-		_putchar('\n');
-
 	}
-
 }
