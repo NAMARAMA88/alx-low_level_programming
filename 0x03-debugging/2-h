@@ -1,8 +1,0 @@
-sh: 2-main.h: command not found
-root@a6b3ef57f4c2:/alx-low_level_programming/0x03-debugging# vi 2-main.h
-root@a6b3ef57f4c2:/alx-low_level_programming/0x03-debugging# betty 2-main.h
-
-========== 2-main.h ==========
-2-main.h:1: WARNING: This line is not protected from double inclusion
-2-main.h:2: WARNING: This line is not protected from double inclusion
-2-main.h:4: WARNING: This line is not protected from do
