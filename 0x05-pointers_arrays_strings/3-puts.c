@@ -9,7 +9,7 @@
  * On success: returns no error
  */
 
-void _puts(char *str)
+void _ puts(char *str)
 {
 	int i = 0;
 
