@@ -8,7 +8,7 @@
  * Description: prints a string
  * On success: returns no error
  */
-void puts(char *str)
+void _puts(char *str)
 {
 	int i = 0;
 
@@ -19,4 +19,3 @@ void puts(char *str)
 	}
 	putchar(10);
 }
-
