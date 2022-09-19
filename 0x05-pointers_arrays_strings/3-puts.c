@@ -1,21 +1,17 @@
-#include <stdio.h>
-#include "main.h"
+#include "holberton.h"
 
 /**
- * puts - prints a string
- * @str: string to print
- *
- * Description: prints a string
- * On success: returns no error
+ * _puts - prints string
+ * @str: input string
+ * Return: no return
  */
+
 void _puts(char *str)
 {
-	int i = 0;
-
-	while (*(str + i) != '\0')
+	while (*str != '\0')
 	{
-		putchar(*(str + i));
-		i++;
+		_putchar(*str);
+		str++;
 	}
-	putchar(10);
+	_putchar('\n');
 }
